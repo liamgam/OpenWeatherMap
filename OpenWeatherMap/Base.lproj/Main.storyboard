@@ -35,7 +35,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="MHX-JR-xhv">
+                            <searchBar contentMode="redraw" placeholder="Search for cities across the world" translatesAutoresizingMaskIntoConstraints="NO" id="MHX-JR-xhv">
                                 <rect key="frame" x="10" y="420" width="394" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
