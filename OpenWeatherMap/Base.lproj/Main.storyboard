@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="9ea-bS-DgM">
-                                <rect key="frame" x="10" y="346" width="394" height="54"/>
+                                <rect key="frame" x="10" y="353" width="394" height="54"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open Weather Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cC0-fx-cu6">
                                         <rect key="frame" x="104" y="0.0" width="186" height="27.5"/>
@@ -36,7 +36,10 @@
                                 </subviews>
                             </stackView>
                             <searchBar contentMode="redraw" placeholder="Search for cities across the world" translatesAutoresizingMaskIntoConstraints="NO" id="MHX-JR-xhv">
-                                <rect key="frame" x="10" y="420" width="394" height="56"/>
+                                <rect key="frame" x="10" y="427" width="394" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="7h6-vD-wrK"/>
+                                </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by Weather Map API" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4E-mk-K3s">
