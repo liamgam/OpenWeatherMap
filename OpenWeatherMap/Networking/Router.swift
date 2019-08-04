@@ -12,7 +12,7 @@ enum Router {
     
     case getWeatherInfo(city: String)
     
-    var apiKey: String? {
+    private var apiKey: String? {
         let infoFile = getPlist()
         if let infoFile = infoFile {
             return infoFile["APIKey"]! as! String
@@ -48,7 +48,4 @@ enum Router {
                    URLQueryItem(name: "APPID", value: apiKey!)]
         }
     }
-        
-    
-    
 }
