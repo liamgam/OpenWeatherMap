@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct WindInfo {
+struct WindInfo: Codable {
     
-    let speed: String
+    let speed: Int
     
 }

@@ -10,8 +10,8 @@ import Foundation
 
 struct MainInfo: Codable {
     
-    let minTemperature: String
-    let maxTemperature: String
+    let minTemperature: Int
+    let maxTemperature: Int
     
     enum CodingKeys: String, CodingKey {
         case minTemperature = "temp_min"

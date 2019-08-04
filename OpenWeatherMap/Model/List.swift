@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct List {
+struct List: Codable {
     
     let main: MainInfo
     let weather: [WeatherInfo]
