@@ -10,6 +10,6 @@ import Foundation
 
 struct WindInfo: Codable {
     
-    let speed: Int
+    let speed: Float
     
 }
