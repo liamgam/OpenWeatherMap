@@ -17,11 +17,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         searchbar.configureSearchbar()
-        
-    }
+        searchbar.delegate = self
 
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         searchbar.resignFirstResponder()
     }
+}
+
+extension ViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        NetworkService.getWeatherData(router: .getWeatherInfo(city: searchbar.text!)) { (result: Result<Weather, Error>) in
+            switch result {
+            case .success(let res):
+                print("success \(res)")
+            case .failure(let err):
+                print("failure \(err)")
+            }
+        }
+    }
+    
 }
 
