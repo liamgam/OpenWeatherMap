@@ -10,7 +10,7 @@ import Foundation
 
 class NetworkService {
     
-    class func getWeatherData<T: Codable>(router: Router, completion: @escaping (Result<[T], Error>) -> ()) {
+    class func getWeatherData<T: Codable>(router: Router, completion: @escaping (Result<T, Error>) -> ()) {
         
         var components = URLComponents()
         components.scheme = router.scheme
@@ -23,9 +23,7 @@ class NetworkService {
         let request = URLRequest(url: url)
         
         let dataTask = session.dataTask(with: request) { data, response, error in
-            
             guard error == nil else {
-                print(error?.localizedDescription)
                 completion(.failure(error!))
                 return
             }
@@ -38,7 +36,7 @@ class NetworkService {
                 return
             }
             
-            let responseObj = try! JSONDecoder().decode([T].self, from: data)
+            let responseObj = try! JSONDecoder().decode(T.self, from: data)
             DispatchQueue.main.async {
                 completion(.success(responseObj))
             }
