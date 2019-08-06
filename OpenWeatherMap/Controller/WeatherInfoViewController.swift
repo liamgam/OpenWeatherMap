@@ -18,10 +18,20 @@ class WeatherInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setWeatherInfo()
 
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func setWeatherInfo() {
+        if let weather = data {
+            minTempLabel.text = String(weather.main.minTemperature)
+            maxTempLabel.text = String(weather.main.maxTemperature)
+            weatherDescLabel.text = weather.weather[0].main
+        }
     }
 }
