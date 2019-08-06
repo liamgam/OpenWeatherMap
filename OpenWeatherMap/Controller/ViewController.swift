@@ -32,7 +32,10 @@ extension ViewController: UISearchBarDelegate {
         NetworkService.getWeatherData(router: .getWeatherInfo(city: searchbar.text!)) { (result: Result<Weather, Error>) in
             switch result {
             case .success(let res):
-                print("success \(res)")
+                let weatherInfoViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "weatherInfoViewController") as! WeatherInfoViewController
+                weatherInfoViewController.data = res
+                self.present(weatherInfoViewController, animated: true, completion: nil)
+                
             case .failure(let err):
                 print("failure \(err)")
             }
