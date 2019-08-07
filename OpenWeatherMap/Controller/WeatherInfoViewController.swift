@@ -11,6 +11,9 @@ import UIKit
 class WeatherInfoViewController: UIViewController {
     
     var data: Weather?
+    var cityName: String?
+    
+    @IBOutlet weak var cityNameLabel: UILabel!
 
     @IBOutlet weak var minTempLabel: UILabel!
     @IBOutlet weak var maxTempLabel: UILabel!
@@ -32,6 +35,7 @@ class WeatherInfoViewController: UIViewController {
             minTempLabel.text = String(weather.main.minTemperature)
             maxTempLabel.text = String(weather.main.maxTemperature)
             weatherDescLabel.text = weather.weather[0].main
+            cityNameLabel.text = cityName!
         }
     }
 }

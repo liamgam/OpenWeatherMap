@@ -210,6 +210,7 @@
                         <viewLayoutGuide key="safeArea" id="zKT-x5-DWc"/>
                     </view>
                     <connections>
+                        <outlet property="cityNameLabel" destination="rkP-FG-cu7" id="Kb6-CD-blV"/>
                         <outlet property="maxTempLabel" destination="nAb-ey-tyL" id="E8W-sw-S4v"/>
                         <outlet property="minTempLabel" destination="HOn-TP-qnr" id="y1g-fp-i1L"/>
                         <outlet property="weatherDescLabel" destination="Dfn-ox-hUb" id="ujB-kM-IYT"/>

@@ -34,6 +34,7 @@ extension ViewController: UISearchBarDelegate {
             case .success(let res):
                 let weatherInfoViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "weatherInfoViewController") as! WeatherInfoViewController
                 weatherInfoViewController.data = res
+                weatherInfoViewController.cityName = searchBar.text!
                 self.present(weatherInfoViewController, animated: true, completion: nil)
                 
             case .failure(let err):
